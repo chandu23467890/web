@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuscleFit - Your Ultimate Fitness Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MuscleFit</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#workouts">Workouts</a>
+            <a href="#diet">Diet</a>
+            <a href="#subscription">Subscription</a>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginBtn">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+    </nav>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <h1>Welcome to MuscleFit</h1>
+        <p>Your Journey to Peak Performance Starts Here</p>
+        <button class="cta-button">Get Started</button>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>We are dedicated to helping you achieve your fitness goals through personalized workout plans, nutrition guidance, and progress tracking.</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Custom Workouts</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Diet Plans</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Progress Tracking</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workouts">
+        <h2>Workout Tracker</h2>
+        <div class="workout-container">
+            <div class="workout-form">
+                <h3>Add Workout</h3>
+                <form id="workoutForm">
+                    <input type="date" id="workoutDate" required>
+                    <select id="exerciseType" required>
+                        <option value="">Select Exercise</option>
+                        <option value="bench-press">Bench Press</option>
+                        <option value="squat">Squat</option>
+                        <option value="deadlift">Deadlift</option>
+                        <option value="shoulder-press">Shoulder Press</option>
+                    </select>
+                    <input type="number" id="weight" placeholder="Weight (kg)" required>
+                    <input type="number" id="sets" placeholder="Sets" required>
+                    <input type="number" id="reps" placeholder="Reps" required>
+                    <button type="submit">Add Exercise</button>
+                </form>
+            </div>
+            <div class="workout-history">
+                <h3>Workout History</h3>
+                <div id="workoutList"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diet">
+        <h2>Diet Plans</h2>
+        <div class="diet-plans">
+            <div class="diet-plan">
+                <h3>Weight Loss</h3>
+                <ul>
+                    <li>Calorie-controlled meals</li>
+                    <li>High protein</li>
+                    <li>Low carb options</li>
+                </ul>
+            </div>
+            <div class="diet-plan">
+                <h3>Muscle Gain</h3>
+                <ul>
+                    <li>High protein meals</li>
+                    <li>Complex carbohydrates</li>
+                    <li>Healthy fats</li>
+                </ul>
+            </div>
+            <div class="diet-plan">
+                <h3>Maintenance</h3>
+                <ul>
+                    <li>Balanced nutrition</li>
+                    <li>Portion control</li>
+                    <li>Flexible eating</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscription">
+        <h2>Subscription Plans</h2>
+        <div class="subscription-plans">
+            <div class="plan">
+                <h3>Basic</h3>
+                <p class="price">₹825/month</p>
+                <p class="price-usd">($9.99/month)</p>
+                <ul>
+                    <li>Basic workout tracking</li>
+                    <li>Standard diet plans</li>
+                    <li>Email support</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="plan featured">
+                <h3>Pro</h3>
+                <p class="price">₹1,650/month</p>
+                <p class="price-usd">($19.99/month)</p>
+                <ul>
+                    <li>Advanced workout tracking</li>
+                    <li>Custom diet plans</li>
+                    <li>Priority support</li>
+                    <li>Progress analytics</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="plan">
+                <h3>Premium</h3>
+                <p class="price">₹2,475/month</p>
+                <p class="price-usd">($29.99/month)</p>
+                <ul>
+                    <li>All Pro features</li>
+                    <li>Personal trainer consultation</li>
+                    <li>24/7 support</li>
+                    <li>Video tutorials</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MuscleFit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
